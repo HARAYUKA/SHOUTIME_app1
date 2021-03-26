@@ -18,6 +18,7 @@
 //= require popper
 //= require bootstrap-sprockets
 
+//かんたん診断
 $(function(){
   $radio = $(':radio');
   //$radio.click(check);//チェックと連動させる
@@ -32,11 +33,11 @@ $(function(){
       });
       
       if (total > 6) {
-          result = 'ｷﾀ━(ﾟ∀ﾟ)━!';
+          result = '〇あなたはもしかしたらこんな「目」かも';
       } else if( total > 3 ) {
-          result = '(・∀・)ｲｲ!';
+          result = '〇あなたはもしかしたらこんな「目」かも';
       } else if( total > 0) {
-          result = '( ´_ゝ｀)';
+          result = '〇あなたはもしかしたらこんな「目」かも';
       } else {
           result = '何も選択されていません';
       }
