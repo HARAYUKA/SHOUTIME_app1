@@ -18,6 +18,9 @@
 //= require popper
 //= require bootstrap-sprockets
 
+
+
+
 //かんたん診断
 //$(function(){
 //  $radio = $(':radio');

@@ -1,3 +1,28 @@
 // Place all the styles related to the Diagnoses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+ul {
+	list-style: none;
+	margin: 0px 0px 0px 2px;
+	padding: 0px;
+}
+
+ul li {
+	padding: 17px 0px 0px 60px;
+	background: url("images/button.png") no-repeat 0 0;
+	width: 290px;
+	height: 33px;
+	_width: 350px;
+	_height: 50px;
+	cursor:pointer;
+	color:#333;
+}
+
+ul li.selected {
+	background-position: 0px -50px;
+}
+
+ul li:hover {
+	background-position: 0px -50px;
+}
