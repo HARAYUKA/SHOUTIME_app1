@@ -1,4 +1,6 @@
-<h1>「眼トレ・メントレ・脳トレ」かんたん診断</h1>
+<%
+=begin%>
+ <h1>「眼トレ・メントレ・脳トレ」かんたん診断</h1>
 <div class="quiz-container">
   <div id="quiz"></div>
 </div>
@@ -6,5 +8,277 @@
 <button id="next">次の質問</button>
 <button id="submit">結果</button>
 <div id="results"></div>
+
+<script src="index.js"></script> 
+<%
+=end%>
+
+<%
+=begin%>
+ <div class="container">
+<h1>かんたん診断</h1>
+  <fieldset>
+      <legend>Q1.暗記科目が苦手だ</legend>
+      <label><input type="radio" name="c1" value="1" /> はい</label>
+      <label><input type="radio" name="c1" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q2.昨日の晩御飯が思い出せないことがある</legend>
+      <label><input type="radio" name="c2" value="1" /> はい</label>
+      <label><input type="radio" name="c2" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q3.高校時代の修学旅行先を思い出すのに時間がかかる</legend>
+      <label><input type="radio" name="c3" value="1" /> はい</label>
+      <label><input type="radio" name="c3" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q4.学生時代の給食にはどんなメニューがあったか思い出すことが困難である</legend>
+      <label><input type="radio" name="c4" value="1" /> はい</label>
+      <label><input type="radio" name="c4" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q5.学生時代の友達とハマっていた遊び・事柄を思い出すことが難しい</legend>
+      <label><input type="radio" name="c5" value="1" /> はい</label>
+      <label><input type="radio" name="c5" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q6.スケジューリングが苦手だ</legend>
+      <label><input type="radio" name="c6" value="1" /> はい</label>
+      <label><input type="radio" name="c6" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q7.将来像をイメージするのが苦手だ</legend>
+      <label><input type="radio" name="c7" value="1" /> はい</label>
+      <label><input type="radio" name="c7" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q8.創造力は無い方だと思う</legend>
+      <label><input type="radio" name="c8" value="1" /> はい</label>
+      <label><input type="radio" name="c8" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q9.物事をアレンジするのは不得意である</legend>
+      <label><input type="radio" name="c9" value="1" /> はい</label>
+      <label><input type="radio" name="c9" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q10.友達や同僚に本当のことを言えないことがある</legend>
+      <label><input type="radio" name="c10" value="1" /> はい</label>
+      <label><input type="radio" name="c10" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q11.会話の内容が思い出せないことがよくある</legend>
+      <label><input type="radio" name="c11" value="1" /> はい</label>
+      <label><input type="radio" name="c11" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q12.何回同じこと言わすの？と言われたことがある</legend>
+      <label><input type="radio" name="c12" value="1" /> はい</label>
+      <label><input type="radio" name="c12" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q13.校歌のリズムを思い出すのに時間がかかる</legend>
+      <label><input type="radio" name="c13" value="1" /> はい</label>
+      <label><input type="radio" name="c13" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q14.擬音語を使うことが多い</legend>
+      <label><input type="radio" name="c14" value="1" /> はい</label>
+      <label><input type="radio" name="c14" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q15.どちらかというと新曲を覚えるのは苦手である</legend>
+      <label><input type="radio" name="c15" value="1" /> はい</label>
+      <label><input type="radio" name="c15" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q16.学校のチャイムがエレキギターだったら？など想像する事が苦手だ</legend>
+      <label><input type="radio" name="c16" value="1" /> はい</label>
+      <label><input type="radio" name="c16" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q17.音でびっくりする事が多い</legend>
+      <label><input type="radio" name="c17" value="1" /> はい</label>
+      <label><input type="radio" name="c17" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q18.即興で替え歌を作るのは難しい</legend>
+      <label><input type="radio" name="c18" value="1" /> はい</label>
+      <label><input type="radio" name="c18" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q19.言葉の裏を読み取るのが難しい</legend>
+      <label><input type="radio" name="c19" value="1" /> はい</label>
+      <label><input type="radio" name="c19" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q20.自分のテーマソングを作るとなったら、どんな感じかなかなか思い浮かばない</legend>
+      <label><input type="radio" name="c20" value="1" /> はい</label>
+      <label><input type="radio" name="c20" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q21.何度も同じ言葉を繰り返して言ってしまう傾向がある</legend>
+      <label><input type="radio" name="c21" value="1" /> はい</label>
+      <label><input type="radio" name="c21" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q22.心の中で独り言をよく言っている</legend>
+      <label><input type="radio" name="c22" value="1" /> はい</label>
+      <label><input type="radio" name="c22" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q23.自分との対話（内省）が苦手である</legend>
+      <label><input type="radio" name="c23" value="1" /> はい</label>
+      <label><input type="radio" name="c23" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q24.同じ失敗をよくすることがある</legend>
+      <label><input type="radio" name="c24" value="1" /> はい</label>
+      <label><input type="radio" name="c24" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q25.前回の失敗から学んで次に生かすことが苦手である</legend>
+      <label><input type="radio" name="c25" value="1" /> はい</label>
+      <label><input type="radio" name="c25" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q26.どちらかというとゆっくり話すタイプである</legend>
+      <label><input type="radio" name="c26" value="1" /> はい</label>
+      <label><input type="radio" name="c26" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q27.臭いに鈍感な面がある</legend>
+      <label><input type="radio" name="c27" value="1" /> はい</label>
+      <label><input type="radio" name="c27" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q28.自分の思った通りに身体が動かない時がある</legend>
+      <label><input type="radio" name="c28" value="1" /> はい</label>
+      <label><input type="radio" name="c28" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q29.痛みに鈍感である</legend>
+      <label><input type="radio" name="c29" value="1" /> はい</label>
+      <label><input type="radio" name="c29" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q30.段差につまずくことがよくある</legend>
+      <label><input type="radio" name="c30" value="1" /> はい</label>
+      <label><input type="radio" name="c30" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q31.気配りが苦手である</legend>
+      <label><input type="radio" name="c31" value="1" /> はい</label>
+      <label><input type="radio" name="c31" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q32.集中力がなかなか持続しない</legend>
+      <label><input type="radio" name="c32" value="1" /> はい</label>
+      <label><input type="radio" name="c32" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q33.自分では忍耐力が無いほうだと思う</legend>
+      <label><input type="radio" name="c33" value="1" /> はい</label>
+      <label><input type="radio" name="c33" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q34.１日の中でスマホやPCを見ている時間が結構ある</legend>
+      <label><input type="radio" name="c34" value="1" /> はい</label>
+      <label><input type="radio" name="c34" value="2" /> いいえ</label>
+  </fieldset>
+  <fieldset>
+      <legend>Q35.YouTubeやドラマなど動画コンテンツをよく見る方だ</legend>
+      <label><input type="radio" name="c35" value="1" /> はい</label>
+      <label><input type="radio" name="c35" value="2" /> いいえ</label>
+  </fieldset>
+  <button id="check">Check</button>
+  <div id="result"></div>
+</div>
+
+<script src="index.js"></script> 
+<%
+=end%>
+
+<div id="wrapper">
+  <div class="question">
+    <h1 class="title">ソーシャルスタイル診断</h1>
+    <ul class="questions">
+      <li class="textBox">
+        <span class="text">Q1. 冷静で人からの指示は嫌い</span>
+        <label class="yes"><input class="typeA typeD" name="q01" type="radio">YES</label>
+        <label class="no"><input class="typeB typeC" name="q01" type="radio">NO</label>
+      </li>
+      <li class="textBox">
+        <span class="text">Q2. 自分の話をすることを好む</span>
+        <label class="yes"><input class="typeB typeA" name="q02" type="radio">YES</label>
+        <label class="no"><input class="typeC typeD" name="q02" type="radio">NO</label>
+      </li>
+      <li class="textBox">
+        <span class="text">Q3. 周りの意見を大事にする方だ</span>
+        <label class="yes"><input class="typeC typeD" name="q03" type="radio">YES</label>
+        <label class="no"><input class="typeA typeB" name="q03" type="radio">NO</label>
+      </li>
+      <li class="textBox">
+        <span class="text">Q4. 情報を集めたり分析することが得意だ</span>
+        <label class="yes"><input class="typeD typeC" name="q04" type="radio">YES</label>
+        <label class="no"><input class="typeA typeB" name="q04" type="radio">NO</label>
+      </li>
+      <li class="textBox">
+        <span class="text">Q5. 戦略立案や勝負事への興味が強い</span>
+        <label class="yes"><input class="typeA typeD" name="q05" type="radio">YES</label>
+        <label class="no"><input class="typeB typeC" name="q05" type="radio">NO</label>
+      </li>
+      <li class="textBox">
+        <span class="text">Q6. ノリがよくムードメーカーだと言われる</span>
+        <label class="yes"><input class="typeB typeC" name="q06" type="radio">YES</label>
+        <label class="no"><input class="typeA typeD" name="q06" type="radio">NO</label>
+      </li>
+      <li class="textBox">
+      <span class="text">Q7. 気配り上手、聞き上手と言われる</span>
+      <label class="yes"><input class="typeC typeD" name="q07" type="radio">YES</label>
+      <label class="no"><input class="typeA typeB" name="q07" type="radio">NO</label>
+      </li>
+      <li class="textBox">
+      <span class="text">Q8. 感情を表に出すのは、苦手だ</span>
+      <label class="yes"><input class="typeD typeA" name="q08" type="radio">YES</label>
+      <label class="no"><input class="typeC typeB" name="q08" type="radio">NO</label>
+      </li>
+    </ul>
+    <button>診断する</button>
+  </div>
+  <div class="result ResultA" style="display: block;">
+    <div class="ResultA__recommend">あなたの性格は・・・・</div>
+    <div class="ResultA__Amenu">
+      <div class="ResultA__Amenu__text">前進型・行動派</div>
+    </div>
+    <p>あなたは迅速かつ合理的に仕事を進めるタイプです。ビジネスライクな性格で、プロセスよりも結果を重視し、決断力に優れています。経営者に多いタイプに多いとされます。</p>
+    <img width="306px" class="image" src="/assets/close-up-face-fashion-fine-looking-450212.jpg">
+  </div>
+  <div class="result ResultB" style="display: none;">
+    <div class="ResultB__recommend">あなたの性格は・・・・</div>
+    <div class="ResultB__Bmenu">
+      <div class="ResultB__Bmenu__text">直感型・感覚派</div>
+    </div>
+    <p>あなたは、周りから注目されることを好むタイプです。ビジネス面では、自ら先頭に立って人を率いていく傾向にあります。</p>
+    <img width="306px" class="image" src="/assets/men-s-white-button-up-dress-shirt-708440.jpg">
+  </div>
+  <div class="result ResultC" style="display: none;">
+    <div class="ResultC__recommend">あなたの性格は・・・・</div>
+    <div class="ResultC__Cmenu">
+      <div class="ResultC__Cmenu__text">温和型・協調派</div>
+    </div>
+    <p>あなたは、どこにいてもみんなの調停役になるタイプです。周囲の気持ちに敏感で、自分の話をするよりも相手の話に耳を傾ける傾向にあります。</p>
+    <img width="306px" class="image" src="/assets/woman-wearing-teal-dress-sitting-on-chair-talking-to-man-2422280.jpg">
+  </div>
+  <div class="result ResultD" style="display: none;">
+    <div class="ResultD__recommend">あなたの性格は・・・・</div>
+    <div class="ResultD__Dmenu">
+      <div class="ResultD__Dmenu__text">分析型・思考派</div>
+    </div>
+    <p>あなたは、独特の価値観や雰囲気を持っていて、周囲に影響されにくいマイペースな人です。仕事においては、データの収集や分析に黙々と取り組みます。</p>
+    <img width="306px" class="image" src="/assets/person-using-a-laptop-3183131.jpg">
+  </div>
+</div>
 
 <script src="index.js"></script>
