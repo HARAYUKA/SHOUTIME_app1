@@ -184,10 +184,12 @@
 //  });
 
 $(function(){
+  //一度結果を非表示にする
+  $(".result").hide();
   //ボタンがクリックされた時
   $("button").on("click", function(){
-  //一度結果を非表示にする
-    $(".result").hide();   
+    //一度結果を非表示にする
+    $(".result").hide();
     //問題数を取得
     var qNum = $("ul li").length;
     if( $("ul li input:checked").length < qNum ){
