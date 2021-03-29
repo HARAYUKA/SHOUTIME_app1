@@ -17,17 +17,23 @@ $(function(){
             typeBNum = $(".typeB:checked").length,
             typeCNum = $(".typeC:checked").length,
             typeDNum = $(".typeD:checked").length,
-            typeENum = $(".typeD:checked").length;
-        if( typeANum >= typeBNum && typeANum >= typeCNum && typeANum >= typeDNum && typeANum >= typeENum) {
+            typeENum = $(".typeE:checked").length;
+            typeFNum = $(".typeF:checked").length;
+            typeGNum = $(".typeG:checked").length;
+        if( typeANum >= typeBNum && typeANum >= typeCNum && typeANum >= typeDNum && typeANum >= typeENum && typeANum >= typeFNum && typeANum >= typeGNum) {
             $(".ResultA").fadeIn();
-        } else if( typeBNum >= typeANum && typeBNum >= typeCNum && typeBNum >= typeDNum && typeBNum >= typeENum) {
+        } else if( typeBNum >= typeANum && typeBNum >= typeCNum && typeBNum >= typeDNum && typeBNum >= typeENum && typeBNum >= typeFNum && typeBNum >= typeGNum) {
             $(".ResultB").fadeIn();
-        } else if( typeCNum >= typeANum && typeCNum >= typeBNum && typeCNum >= typeDNum && typeCNum >= typeENum) {
+        } else if( typeCNum >= typeANum && typeCNum >= typeBNum && typeCNum >= typeDNum && typeCNum >= typeENum && typeCNum >= typeFNum && typeCNum >= typeGNum) {
             $(".ResultC").fadeIn();
-        } else if( typeDNum >= typeBNum && typeDNum >= typeCNum && typeDNum >= typeANum && typeDNum >= typeENum) {
+        } else if( typeDNum >= typeANum && typeDNum >= typeBNum && typeDNum >= typeCNum && typeDNum >= typeENum && typeDNum >= typeFNum && typeDNum >= typeGNum) {
             $(".ResultD").fadeIn();
-        } else if( typeENum >= typeBNum && typeENum >= typeCNum && typeENum >= typeANum && typeENum >= typeDNum) {
+        } else if( typeENum >= typeANum && typeENum >= typeBNum && typeENum >= typeCNum && typeENum >= typeDNum && typeENum >= typeFNum && typeENum >= typeGNum) {
             $(".ResultE").fadeIn();
+        } else if( typeFNum >= typeANum && typeFNum >= typeBNum && typeFNum >= typeCNum && typeFNum >= typeDNum && typeFNum >= typeENum && typeFNum >= typeGNum) {
+            $(".ResultF").fadeIn();
+        } else if( typeGNum >= typeANum && typeGNum >= typeBNum && typeGNum >= typeCNum && typeGNum >= typeDNum && typeGNum >= typeENum && typeGNum >= typeFNum) {
+            $(".ResultG").fadeIn();
       }
     }
   });
