@@ -9,7 +9,7 @@ $(function(){
     var qNum = $("ul li").length;
     if( $("ul li input:checked").length < qNum ){
       //全てチェックしていなかったらアラートを出す
-      alert("未回答の問題があります");
+      alert("未回答の質問があります");
     } 
     else {
         //チェックされているinputの数を取得
