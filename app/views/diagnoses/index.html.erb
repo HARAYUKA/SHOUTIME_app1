@@ -4,7 +4,8 @@
       <h1 class="title">「眼トレ・メントレ・脳トレ」かんたん診断</h1>
       <ul class="questions">
         <li class="textBox">
-          <span class="text">Q1. 暗記科目が苦手だ</span>
+        <% @diagnoses.each do |diagnosis| %>
+          <span class="text">Q1. <%= diagnosis.question_content.present? ? diagnosis.question_content : "" %></span>
           <div class="answer">
             <%= form_with(local: true) do |f| %>
               <%= f.radio_button :question, :yes, class: "typeA" %>
@@ -12,7 +13,8 @@
               <%= f.radio_button :question, :no %>
               <%= f.label :question, "NO" %>
             <% end %>
-          </div>  
+          </div>
+        <% end %>  
         </li>
         <li class="textBox">
           <span class="text">Q2. 昨日の晩御飯が思い出せないことがある</span>
