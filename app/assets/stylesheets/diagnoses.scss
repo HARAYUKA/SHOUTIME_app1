@@ -2,13 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+
 
 #wrapper {
   max-width: 900px;
   margin: 0 auto;
   padding: 30px 20px;
   box-sizing: border-box;
+  text-align: center;
 }
 
 #wrapper .question .title {
@@ -33,7 +34,7 @@
 #wrapper .question .questions .textBox .text {
   display: inline-block;
   width: 600px;
-  text-align:left
+  text-align: left;
 }
 
 #wrapper .question .questions .textBox .yes {
@@ -61,6 +62,28 @@
   cursor: pointer;
 }
 
+#wrapper .Result__recommend {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+#wrapper .Result__menu__text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+#wrapper .Result .image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#wrapper .Result__menu {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 #wrapper .ResultA {
 	padding: 20px;
 	border: 3px solid #f1f1f1;
@@ -69,55 +92,12 @@
 	display: none;
 }
 
-#wrapper .ResultA__recommend {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-#wrapper .ResultA__Amenu__text {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-#wrapper .ResultA .image {
-  margin-top: 20px;
-  text-align: center;
-}
-
-#wrapper .ResultA__Amenu {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 #wrapper .ResultB {
-  padding: 20px;
-  border: 3px solid #f1f1f1;
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: none;
-}
-
-#wrapper .ResultB__recommend {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-#wrapper .ResultB__Bmenu__text {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-#wrapper .ResultB .image {
-  margin-top: 20px;
-}
-
-#wrapper .ResultB__Bmenu {
-  margin-bottom: 20px;
-  text-align: center;
+	padding: 20px;
+	border: 3px solid #f1f1f1;
+	box-sizing: border-box;
+	margin: 0 auto;
+	display: none;
 }
 
 #wrapper .ResultC {
@@ -128,27 +108,6 @@
   display: none;
 }
 
-#wrapper .ResultC__recommend {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-#wrapper .ResultC__Cmenu__text {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-#wrapper .ResultC .image {
-  margin-top: 20px;
-}
-
-#wrapper .ResultC__Cmenu {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
 #wrapper .ResultD {
   padding: 20px;
   border: 3px solid #f1f1f1;
@@ -157,25 +116,28 @@
   display: none;
 }
 
-#wrapper .ResultD__recommend {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 15px;
-  font-weight: bold;
+#wrapper .ResultE {
+  padding: 20px;
+  border: 3px solid #f1f1f1;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: none;
 }
 
-#wrapper .ResultD__Dmenu__text {
-  font-size: 24px;
-  font-weight: bold;
+#wrapper .ResultF {
+  padding: 20px;
+  border: 3px solid #f1f1f1;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: none;
 }
 
-#wrapper .ResultD .image {
-  margin-top: 20px;
-}
-
-#wrapper .ResultD__Dmenu {
-  margin-bottom: 20px;
-  text-align: center;
+#wrapper .ResultG {
+  padding: 20px;
+  border: 3px solid #f1f1f1;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: none;
 }
 
 p {
@@ -193,4 +155,10 @@ ul {
 li {
   display: list-item;
   text-align: -webkit-match-parent;
+}
+
+#wrapper .btn {
+  margin: 10px 0 0 170px;
+  width: 280px;
+  white-space: normal;
 }
