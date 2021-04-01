@@ -12,40 +12,39 @@
   text-align: center;
 }
 
-#wrapper .question .title {
+.title {
   text-align: center;
   font-size: 36px;
   margin-bottom: 30px;
   font-weight: bold;
 }
 
-#wrapper .question .questions {
+.questions {
   background: #f1f1f1;
   padding: 20px;
   margin: 0 auto;
   box-sizing: border-box;
 }
 
-#wrapper .question .questions .textBox {
+.textBox {
   margin-bottom: 10px;
   text-align: center;
+  display: flex;
 }
 
-#wrapper .question .questions .textBox .text {
-  display: inline-block;
-  width: 600px;
+.text {
+  padding-left: 45px;
+  width: 650px;
   text-align: left;
 }
 
-#wrapper .question .questions .textBox .yes {
-  padding: 10px 10px 10px 20px;
+
+.answer {
+  padding-left: 15px;
+  word-spacing: 5px
 }
 
-#wrapper .question .questions .textBox .no {
-  padding: 10px 10px 10px 10px;
-}
-
-#wrapper .question button {
+.question button {
   background: #5c90d2;
   width: 250px;
   display: block;
@@ -62,90 +61,39 @@
   cursor: pointer;
 }
 
-#wrapper .Result__recommend {
+.Result_recommend {
   text-align: center;
   font-size: 18px;
   margin-bottom: 15px;
   font-weight: bold;
 }
 
-#wrapper .Result__menu__text {
+.Result_menu_text {
   font-size: 24px;
   font-weight: bold;
 }
 
-#wrapper .Result .image {
+.Result .image {
   margin-top: 20px;
   text-align: center;
 }
 
-#wrapper .Result__menu {
+.Result_menu {
   margin-bottom: 20px;
   text-align: center;
 }
 
-#wrapper .ResultA {
+.result {
 	padding: 20px;
 	border: 3px solid #f1f1f1;
 	box-sizing: border-box;
 	margin: 0 auto;
 	display: none;
-}
-
-#wrapper .ResultB {
-	padding: 20px;
-	border: 3px solid #f1f1f1;
-	box-sizing: border-box;
-	margin: 0 auto;
-	display: none;
-}
-
-#wrapper .ResultC {
-  padding: 20px;
-  border: 3px solid #f1f1f1;
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: none;
-}
-
-#wrapper .ResultD {
-  padding: 20px;
-  border: 3px solid #f1f1f1;
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: none;
-}
-
-#wrapper .ResultE {
-  padding: 20px;
-  border: 3px solid #f1f1f1;
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: none;
-}
-
-#wrapper .ResultF {
-  padding: 20px;
-  border: 3px solid #f1f1f1;
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: none;
-}
-
-#wrapper .ResultG {
-  padding: 20px;
-  border: 3px solid #f1f1f1;
-  box-sizing: border-box;
-  margin: 0 auto;
-  display: none;
 }
 
 p {
   display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  padding-top: 10px;
 }
 
 ul {
@@ -157,7 +105,7 @@ li {
   text-align: -webkit-match-parent;
 }
 
-#wrapper .btn {
+.btn {
   margin: 10px 0 0 170px;
   width: 280px;
   white-space: normal;
