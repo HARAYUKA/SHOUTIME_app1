@@ -6,6 +6,7 @@ class DiagnosesController < ApplicationController
   end
 
   def show
+    @diagnoses = Diagnosis.all
   end
 
   def new

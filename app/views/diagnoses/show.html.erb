@@ -1,0 +1,19 @@
+<%= link_to "新規作成", new_diagnosis_path, class: "btn btn-primary btn-sm" %>
+<div class="col-md-10 col-md-offset-1">
+  <table class="table table-condenced table-hover" id="table-diagnoses">
+    <thead>
+      <tr>
+        <th>質問内容</th>
+      </tr>
+    </thead>
+    <% @diagnoses.each do |diagnosis| %>
+      <tr>
+        <td><%= diagnosis.question_content.present? ? diagnosis.question_content : "" %></td>
+        <td>
+          <%= link_to "編集", edit_diagnosis_path(diagnosis), class: "btn btn-info btn-sm" %><br>
+          <%= link_to "削除", diagnosis_path(diagnosis), class: "btn btn-danger btn-sm" %>
+        </td>
+      </tr>  
+    <% end %>
+  </table>
+</div>
