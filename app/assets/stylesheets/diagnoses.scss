@@ -9,14 +9,14 @@
   margin: 0 auto;
   padding: 30px 20px;
   box-sizing: border-box;
-  text-align: center;
 }
 
 .title {
-  text-align: center;
   font-size: 36px;
   margin-bottom: 30px;
   font-weight: bold;
+  text-align: center;
+
 }
 
 .questions {
@@ -28,15 +28,13 @@
 
 .textBox {
   margin-bottom: 10px;
-  text-align: center;
+  display: flex;
 }
 
 .text {
   padding-left: 45px;
   width: 650px;
-  text-align: left;
 }
-
 
 .answer {
   padding-left: 15px;
@@ -70,9 +68,10 @@
 .Result_menu_text {
   font-size: 24px;
   font-weight: bold;
+  text-align: center;
 }
 
-.Result .image {
+.image {
   margin-top: 20px;
   text-align: center;
 }
@@ -93,19 +92,19 @@
 p {
   display: block;
   padding-top: 10px;
+  text-align: center;
 }
 
 ul {
   list-style: none;
 }
 
-li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-}
+// li {
+//   display: list-item;
+// }
 
 .btn {
-  margin: 10px 0 0 170px;
+  margin: 10px 0 0 260px;
   width: 280px;
   white-space: normal;
 }
