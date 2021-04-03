@@ -1,0 +1,11 @@
+<%= form_with(model: @diagnosis, local: true) do |f| %>
+  <!--%= render 'shared/error_messages', object: @diagnosis %>-->
+
+  <%= f.label :question_number, class: "label-#{yield(:class_text)}" %>
+  <%= f.number_field :question_number, class: "form-control" %>
+
+  <%= f.label :question_content, class: "label-#{yield(:class_text)}" %>
+  <%= f.text_field :question_content, class: "form-control" %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %>
+<% end %>
