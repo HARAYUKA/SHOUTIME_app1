@@ -24,7 +24,6 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  # 下記ひとまず自分のメルアド
   config.mailer_sender = 'Deviseテスト中 <noreply@example.com>'
 
   # Configure the class responsible to send e-mails.
