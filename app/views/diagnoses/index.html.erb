@@ -8,7 +8,7 @@
             <span class="text">Q<%= diagnosis.question_number %>.<%= diagnosis.question_content %></span>
             <div class="answer">
               <%= form_with(local: true) do |f| %>
-                <%= f.radio_button :question, :yes, class: "#{diagnosis.question_type}"  %>
+                <%= f.radio_button :question, :yes, class: "#{diagnosis.question_type}" %>
                 <%= f.label :question, "YES" %>
                 <%= f.radio_button :question, :no %>
                 <%= f.label :question, "NO" %>

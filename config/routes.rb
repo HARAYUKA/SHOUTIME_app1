@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  get 'diagnoses/index'
   root 'homes#index'
-  resources :diagnoses
+
+  resources :diagnoses, except: :index
   
 end
