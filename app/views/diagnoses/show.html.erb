@@ -5,12 +5,14 @@
       <tr>
         <th>質問番号</th>
         <th>質問内容</th>
+        <th>質問の種類</th>
       </tr>
     </thead>
     <% @diagnoses.each do |diagnosis| %>
       <tr>
-        <td><%= diagnosis.question_number.present? ? diagnosis.question_number : "" %></td>
-        <td><%= diagnosis.question_content.present? ? diagnosis.question_content : "" %></td>
+        <td><%= diagnosis.question_number %></td>
+        <td><%= diagnosis.question_content %></td>
+        <td><%= diagnosis.question_type %></td>
         <td>
           <%= link_to "編集", edit_diagnosis_path(diagnosis), class: "btn btn-info btn-sm" %><br>
           <%= link_to "削除", diagnosis_path(diagnosis), method: :delete,

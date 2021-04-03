@@ -5,20 +5,15 @@
       <% @diagnoses.each do |diagnosis| %>
         <ul class="questions">
           <li class="textBox">
-            <tr>
-              <td>Q<%= diagnosis.question_number %>.</td>
-              <td><%= diagnosis.question_content %></td>
-              <td>
-                <div class="answer">
-                  <%= form_with(local: true) do |f| %>
-                    <%= f.radio_button :question, :yes, class: "typeA" %>
-                    <%= f.label :question, "YES" %>
-                    <%= f.radio_button :question, :no %>
-                    <%= f.label :question, "NO" %>
-                  <% end %>
-                </div>
-              </td>
-            </tr>    
+            <span class="text">Q<%= diagnosis.question_number %>.<%= diagnosis.question_content %></span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "#{diagnosis.question_type}"  %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>    
           </li>
           <!--<li class="textBox">
             <span class="text">Q2. 昨日の晩御飯が思い出せないことがある</span>
@@ -499,4 +494,4 @@
   </div>
 </div>
 
-<script src="index.js"></script>
+<script src="assets/javascripts/index.js"></script>

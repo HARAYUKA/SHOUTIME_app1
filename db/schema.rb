@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_01_143104) do
+ActiveRecord::Schema.define(version: 2021_04_03_060549) do
 
   create_table "diagnoses", force: :cascade do |t|
     t.integer "question_number"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_04_01_143104) do
     t.string "result_pictute"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "question_type"
   end
 
 end

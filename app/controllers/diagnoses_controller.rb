@@ -49,7 +49,7 @@ class DiagnosesController < ApplicationController
     end
 
     def diagnosis_params
-      params.require(:diagnosis).permit(:question_number, :question_content)
+      params.require(:diagnosis).permit(:question_number, :question_content, :question_type)
     end
   
 end
