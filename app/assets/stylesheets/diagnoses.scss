@@ -16,7 +16,6 @@
   margin-bottom: 30px;
   font-weight: bold;
   text-align: center;
-
 }
 
 .questions {
@@ -89,13 +88,13 @@
 	display: none;
 }
 
-p {
+#wrapper p {
   display: block;
   padding-top: 10px;
   text-align: center;
 }
 
-ul {
+#wrapper ul {
   list-style: none;
 }
 
@@ -103,7 +102,7 @@ ul {
 //   display: list-item;
 // }
 
-.btn {
+#wrapper .btn {
   margin: 10px 0 0 260px;
   width: 280px;
   white-space: normal;

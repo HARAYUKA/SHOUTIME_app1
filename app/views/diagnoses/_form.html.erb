@@ -11,4 +11,5 @@
   <%= f.select :question_type, ['typeA', 'typeB', 'typeC', 'typeD', 'typeE', 'typeF', 'typeG'], {include_blank: true }, { class: 'form-control' } %>
 
   <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %>
+  <%= link_to "キャンセル", diagnosis_path(yield(:id)), class: "btn btn-dark" %>
 <% end %>
