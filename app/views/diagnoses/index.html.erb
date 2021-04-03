@@ -2,395 +2,400 @@
   <div id="wrapper">
     <div class="question">
       <h1 class="title">「眼トレ・メントレ・脳トレ」かんたん診断</h1>
-      <ul class="questions">
-        <li class="textBox">
-        <% @diagnoses.each do |diagnosis| %>
-          <span class="text">Q1. <%= diagnosis.question_content.present? ? diagnosis.question_content : "" %></span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeA" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        <% end %>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q2. 昨日の晩御飯が思い出せないことがある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeA" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q3. 高校時代の修学旅行先を思い出すのに時間がかかる</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeA" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q4. 学生時代の給食にはどんなメニューがあったか思い出すことが困難である</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeA" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q5. 学生時代の友達とハマっていた遊び・事柄を思い出すことが難しい</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeA" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q6. スケジューリングが苦手だ</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeB" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q7. 将来像をイメージするのが苦手だ</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeB" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q8. 創造力は無い方だと思う</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeB" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q9. 物事をアレンジするのは不得意である</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeB" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q10. 友達や同僚に本当のことを言えないことがある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeB" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q11. 会話の内容が思い出せないことがよくある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeC" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q12. 何回同じこと言わすの？と言われたことがある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeC" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q13. 校歌のリズムを思い出すのに時間がかかる</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeC" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q14. 擬音語を使うことが多い</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeC" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q15. どちらかというと新曲を覚えるのは苦手である</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeC" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q16. 学校のチャイムがエレキギターだったら？など想像する事が苦手だ</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeD" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>  
-        </li>
-        <li class="textBox">
-          <span class="text">Q17. 音でびっくりする事が多い</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeD" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q18. 即興で替え歌を作るのは難しい</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeD" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q19. 言葉の裏を読み取るのが難しい</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeD" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q20. 自分のテーマソングを作るとなったら、どんな感じかなかなか思い浮かばない</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeD" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q21. 何度も同じ言葉を繰り返して言ってしまう傾向がある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeE" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q22. 心の中で独り言をよく言っている</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeE" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q23. 自分との対話（内省）が苦手である</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeE" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q24. 同じ失敗をよくすることがある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeE" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q25. 前回の失敗から学んで次に生かすことが苦手である</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeE" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q26. どちらかというとゆっくり話すタイプである</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeF" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q27. 臭いに鈍感な面がある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeF" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q28. 自分の思った通りに身体が動かない時がある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeF" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q29. 痛みに鈍感である</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeF" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q30. 段差につまずくことがよくある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeF" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q31. 気配りが苦手である</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeG" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q32. 集中力がなかなか持続しない</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeG" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q33. 自分では忍耐力が無いほうだと思う</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeG" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q34. １日の中でスマホやPCを見ている時間が結構ある</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeG" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-        <li class="textBox">
-          <span class="text">Q35. YouTubeやドラマなど動画コンテンツをよく見る方だ</span>
-          <div class="answer">
-            <%= form_with(local: true) do |f| %>
-              <%= f.radio_button :question, :yes, class: "typeG" %>
-              <%= f.label :question, "YES" %>
-              <%= f.radio_button :question, :no %>
-              <%= f.label :question, "NO" %>
-            <% end %>
-          </div>
-        </li>
-      </ul>
+      <% @diagnoses.each do |diagnosis| %>
+        <ul class="questions">
+          <li class="textBox">
+            <tr>
+              <td>Q<%= diagnosis.question_number %>.</td>
+              <td><%= diagnosis.question_content %></td>
+              <td>
+                <div class="answer">
+                  <%= form_with(local: true) do |f| %>
+                    <%= f.radio_button :question, :yes, class: "typeA" %>
+                    <%= f.label :question, "YES" %>
+                    <%= f.radio_button :question, :no %>
+                    <%= f.label :question, "NO" %>
+                  <% end %>
+                </div>
+              </td>
+            </tr>    
+          </li>
+          <!--<li class="textBox">
+            <span class="text">Q2. 昨日の晩御飯が思い出せないことがある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeA" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q3. 高校時代の修学旅行先を思い出すのに時間がかかる</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeA" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q4. 学生時代の給食にはどんなメニューがあったか思い出すことが困難である</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeA" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q5. 学生時代の友達とハマっていた遊び・事柄を思い出すことが難しい</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeA" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q6. スケジューリングが苦手だ</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeB" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q7. 将来像をイメージするのが苦手だ</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeB" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q8. 創造力は無い方だと思う</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeB" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q9. 物事をアレンジするのは不得意である</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeB" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q10. 友達や同僚に本当のことを言えないことがある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeB" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q11. 会話の内容が思い出せないことがよくある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeC" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q12. 何回同じこと言わすの？と言われたことがある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeC" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q13. 校歌のリズムを思い出すのに時間がかかる</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeC" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q14. 擬音語を使うことが多い</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeC" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q15. どちらかというと新曲を覚えるのは苦手である</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeC" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q16. 学校のチャイムがエレキギターだったら？など想像する事が苦手だ</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeD" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>  
+          </li>
+          <li class="textBox">
+            <span class="text">Q17. 音でびっくりする事が多い</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeD" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q18. 即興で替え歌を作るのは難しい</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeD" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q19. 言葉の裏を読み取るのが難しい</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeD" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q20. 自分のテーマソングを作るとなったら、どんな感じかなかなか思い浮かばない</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeD" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q21. 何度も同じ言葉を繰り返して言ってしまう傾向がある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeE" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q22. 心の中で独り言をよく言っている</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeE" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q23. 自分との対話（内省）が苦手である</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeE" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q24. 同じ失敗をよくすることがある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeE" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q25. 前回の失敗から学んで次に生かすことが苦手である</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeE" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q26. どちらかというとゆっくり話すタイプである</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeF" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q27. 臭いに鈍感な面がある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeF" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q28. 自分の思った通りに身体が動かない時がある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeF" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q29. 痛みに鈍感である</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeF" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q30. 段差につまずくことがよくある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeF" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q31. 気配りが苦手である</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeG" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q32. 集中力がなかなか持続しない</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeG" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q33. 自分では忍耐力が無いほうだと思う</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeG" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q34. １日の中でスマホやPCを見ている時間が結構ある</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeG" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>
+          <li class="textBox">
+            <span class="text">Q35. YouTubeやドラマなど動画コンテンツをよく見る方だ</span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "typeG" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>
+          </li>-->
+        </ul>
+      <% end %>
       <button>診断する</button>
     </div>
     <div class="result ResultA" style="display: none;">
