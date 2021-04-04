@@ -44,6 +44,6 @@ class DiagnosisResultsController < ApplicationController
     end
 
     def diagnosis_result_params
-      params.require(:diagnosis_result).permit(:result_type, :result_text, :result_pictute)
+      params.require(:diagnosis_result).permit(:result_type, :result_text, :result_picture)
     end
 end
