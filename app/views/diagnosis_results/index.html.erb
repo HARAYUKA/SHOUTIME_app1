@@ -14,7 +14,7 @@
         <tr>
           <td><%= result.result_type %></td>
           <td><%= result.result_text %></td>
-          <td><%= image_tag result.result_picture.url if result.result_picture? %></td>
+          <td><%= image_tag(result.result_picture.url, width: "306px") if result.result_picture? %></td>
           <td>
             <%= link_to "編集", edit_diagnosis_result_path(result), class: "btn btn-info" %>
             <%= link_to "削除", diagnosis_result_path(result), method: :delete,

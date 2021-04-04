@@ -8,8 +8,8 @@
     <%= f.label :result_text, class: "label-#{yield(:class_text)}" %>
     <%= f.text_field :result_text, class: "form-control" %>
 
-    <%= f.label :result_pictute, class: "label-#{yield(:class_text)}" %>
-    <%= f.file_field :result_pictute, class: "form-control" %>
+    <%= f.label :result_picture, class: "label-#{yield(:class_text)}" %>
+    <%= f.file_field :result_picture, class: "form-control" %>
 
     <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %>
     <%= link_to "キャンセル", diagnosis_results_path, class: "btn btn-dark" %>
