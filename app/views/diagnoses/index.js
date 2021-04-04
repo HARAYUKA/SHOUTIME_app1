@@ -13,27 +13,27 @@ $(function(){
     } 
     else {
         //チェックされているinputの数を取得
-        var typeANum = $(".typeA:checked").length,
-            typeBNum = $(".typeB:checked").length,
-            typeCNum = $(".typeC:checked").length,
-            typeDNum = $(".typeD:checked").length,
-            typeENum = $(".typeE:checked").length;
-            typeFNum = $(".typeF:checked").length;
-            typeGNum = $(".typeG:checked").length;
+        var typeANum = $(".左上:checked").length,
+            typeBNum = $(".右上:checked").length,
+            typeCNum = $(".左側:checked").length,
+            typeDNum = $(".右側:checked").length,
+            typeENum = $(".左下:checked").length;
+            typeFNum = $(".右下:checked").length;
+            typeGNum = $(".輻輳開散:checked").length;
         if( typeANum >= typeBNum && typeANum >= typeCNum && typeANum >= typeDNum && typeANum >= typeENum && typeANum >= typeFNum && typeANum >= typeGNum) {
-            $(".ResultA").fadeIn();
+            $(".左上（結果）").fadeIn();
         } else if( typeBNum >= typeANum && typeBNum >= typeCNum && typeBNum >= typeDNum && typeBNum >= typeENum && typeBNum >= typeFNum && typeBNum >= typeGNum) {
-            $(".ResultB").fadeIn();
+            $(".右上（結果）").fadeIn();
         } else if( typeCNum >= typeANum && typeCNum >= typeBNum && typeCNum >= typeDNum && typeCNum >= typeENum && typeCNum >= typeFNum && typeCNum >= typeGNum) {
-            $(".ResultC").fadeIn();
+            $(".左側（結果）").fadeIn();
         } else if( typeDNum >= typeANum && typeDNum >= typeBNum && typeDNum >= typeCNum && typeDNum >= typeENum && typeDNum >= typeFNum && typeDNum >= typeGNum) {
-            $(".ResultD").fadeIn();
+            $(".右側（結果）").fadeIn();
         } else if( typeENum >= typeANum && typeENum >= typeBNum && typeENum >= typeCNum && typeENum >= typeDNum && typeENum >= typeFNum && typeENum >= typeGNum) {
-            $(".ResultE").fadeIn();
+            $(".左下（結果）").fadeIn();
         } else if( typeFNum >= typeANum && typeFNum >= typeBNum && typeFNum >= typeCNum && typeFNum >= typeDNum && typeFNum >= typeENum && typeFNum >= typeGNum) {
-            $(".ResultF").fadeIn();
+            $(".右下（結果）").fadeIn();
         } else if( typeGNum >= typeANum && typeGNum >= typeBNum && typeGNum >= typeCNum && typeGNum >= typeDNum && typeGNum >= typeENum && typeGNum >= typeFNum) {
-            $(".ResultG").fadeIn();
+            $(".輻輳開散（結果）").fadeIn();
       }
     }
   });

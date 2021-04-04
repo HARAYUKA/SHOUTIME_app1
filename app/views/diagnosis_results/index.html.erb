@@ -1,6 +1,6 @@
 <div class="container">
-  <h1>診断結果一覧</h1>
   <div class="col-md-11 col-md-offset-1">
+    <h1>診断結果一覧</h1>
     <table class="table table-condenced table-hover" id="table-diagnoses">
       <thead>
         <tr>
@@ -16,9 +16,9 @@
           <td><%= result.result_text %></td>
           <td><%= image_tag(result.result_picture.url, width: "306px") if result.result_picture? %></td>
           <td>
-            <%= link_to "編集", edit_diagnosis_result_path(result), class: "btn btn-info" %>
+            <%= link_to "編集", edit_diagnosis_result_path(result), class: "btn btn-info btn-block" %><br>
             <%= link_to "削除", diagnosis_result_path(result), method: :delete,
-                data: { confirm: "削除してよろしいですか？" },class: "btn btn-danger" %>
+                data: { confirm: "削除してよろしいですか？" },class: "btn btn-danger btn-block" %>
           </td>
         </tr>  
       <% end %>
