@@ -1,2 +1,27 @@
-<h1>DiagnosisResults#index</h1>
-<p>Find me in app/views/diagnosis_results/index.html.erb</p>
+<div class="container">
+  <h1>診断結果一覧</h1>
+  <div class="col-md-11 col-md-offset-1">
+    <table class="table table-condenced table-hover" id="table-diagnoses">
+      <thead>
+        <tr>
+          <th>結果の種類</th>
+          <th>結果テキスト</th>
+          <th>結果（絵・写真）</th>
+          <th><%= link_to "新規作成", new_diagnosis_result_path, class: "btn btn-primary btn-block" %></th>
+        </tr>
+      </thead>
+      <% @diagnosis_results.each do |result| %>
+        <tr>
+          <td><%= result.result_type %></td>
+          <td><%= result.result_text %></td>
+          <td><%= result.result_pictute %></td>
+          <td>
+            <%= link_to "編集", edit_diagnosis_result_path(result), class: "btn btn-info" %>
+            <%= link_to "削除", diagnosis_result_path(result), method: :delete,
+                data: { confirm: "削除してよろしいですか？" },class: "btn btn-danger" %>
+          </td>
+        </tr>  
+      <% end %>
+    </table>
+  </div>
+</div>

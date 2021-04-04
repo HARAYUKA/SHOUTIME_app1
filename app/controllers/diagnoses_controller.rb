@@ -4,6 +4,7 @@ class DiagnosesController < ApplicationController
   
   def index
     @diagnoses = Diagnosis.all.order(:question_number)
+    @diagnosis_results = DiagnosisResult.all
   end
 
   def show

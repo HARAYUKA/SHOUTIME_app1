@@ -393,34 +393,23 @@
       <% end %>
       <button>診断する</button>
     </div>
-    <div class="result ResultA">
-      <div class="Result_recommend">あなたもしかしたら、こんな目かも</div>
-      <div class="Result_menu">
-        <div class="Result_menu_text">【左上に目を動かすのが苦手】</div>
+    <% @diagnosis_results.each do |result| %>
+      <div class="result <%= result.result_type %>">
+        <div class="Result_recommend">あなたもしかしたら、こんな目かも</div>
+        <div class="Result_menu">
+          <div class="Result_menu_text"><%= result_status(result) %></div>
+        </div>
+        <p>そんなあなたにおススメのトレーニングはこちら</p>
+        <div class="image">
+          <%= result.result_pictute %>
+        </div> 
+        <p><%= result.result_text %></p>
+        <div class="btn">
+          <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら", "#", class: "btn btn-info" %>
+        </div>
       </div>
-      <p>Aそんなあなたにおススメのトレーニングはこちら</p>
-      <div class="image">
-        <%= image_tag("close-up-face-fashion-fine-looking-450212.jpg", width: "306px", class: "image") %>
-      </div> 
-      <p>テキスト</p>
-      <div class="btn">
-        <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら", "#", class: "btn btn-info" %>
-      </div>
-    </div>
-    <div class="result ResultB">
-      <div class="Result_recommend">あなたもしかしたら、こんな目かも</div>
-      <div class="Result_menu">
-        <div class="Result_menu_text">【右上に目を動かすのが苦手】</div>
-      </div>
-      <p>Bそんなあなたにおススメのトレーニングはこちら</p>
-      <div class="image">
-        <%= image_tag("men-s-white-button-up-dress-shirt-708440.jpg", width: "306px", class: "image") %>
-      </div>
-      <p>テキスト</p>
-      <div class="btn">
-        <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら", "#", class: "btn btn-info" %>
-      </div>
-    </div>
+    <% end %>
+    
     <div class="result ResultC">
       <div class="Result_recommend">あなたもしかしたら、こんな目かも</div>
       <div class="Result_menu">
