@@ -29,3 +29,8 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# 今回新規に追加↓
+.DS_Store
+/vendor/bundle
+/.idea
