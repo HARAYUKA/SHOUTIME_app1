@@ -8,7 +8,7 @@ RSpec.describe Diagnosis, type: :model do
   
   it "質問番号、質問内容、質問の種類があれば有効" do
     diagnosis = Diagnosis.new(
-      question_number: 1,
+      question_number: 36,
       question_content: "あいうえお",
       question_type: "右上"
     )
@@ -35,8 +35,8 @@ RSpec.describe Diagnosis, type: :model do
   end
   
   it "重複した質問番号は無効" do
-    FactoryBot.create(:diagnosis, question_number: 1)
-    diagnosis = FactoryBot.build(:diagnosis, question_number: 1)
+    FactoryBot.create(:diagnosis, question_number: 36)
+    diagnosis = FactoryBot.build(:diagnosis, question_number: 36)
     diagnosis.valid?
     expect(diagnosis.errors[:question_number]).to include("はすでに存在します")
   end
