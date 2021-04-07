@@ -1,0 +1,116 @@
+// Place all the styles related to the Diagnoses controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.questions {
+  background: #f1f1f1;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.textBox {
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.text {
+  padding-left: 45px;
+  width: 650px;
+}
+
+.answer {
+  padding-left: 15px;
+  word-spacing: 5px
+}
+
+.question button {
+  background: #5c90d2;
+  width: 250px;
+  display: block;
+  margin: 20px auto 30px;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: none;
+  color: #fff;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Result_recommend {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.Result_menu_text {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.image {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.Result_menu {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.result {
+	padding: 20px;
+	border: 3px solid #f1f1f1;
+	box-sizing: border-box;
+	margin: 0 auto;
+	display: none;
+}
+
+#wrapper p {
+  display: block;
+  font-weight: bold;
+  padding-top: 10px;
+  text-align: center;
+}
+
+#wrapper ul {
+  list-style: none;
+}
+
+#wrapper .btn {
+  margin: 10px 0 0 260px;
+  width: 280px;
+  white-space: normal;
+}
+
+#table-diagnoses {
+  td {
+    vertical-align: middle;
+  }
+}
+
+#new-edit .btn {
+  margin-top: 10px;
+}
