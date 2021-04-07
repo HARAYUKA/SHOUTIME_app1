@@ -1,7 +1,46 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+# Diagnosisテーブル
+Diagnosis.create!(question_number: 1, question_content: '暗記科目が苦手だ', question_type: '左上')
+Diagnosis.create!(question_number: 2, question_content: '昨日の晩御飯が思い出せないことがある', question_type: '左上')
+Diagnosis.create!(question_number: 3, question_content: '高校時代の修学旅行先を思い出すのに時間がかかる', question_type: '左上')
+Diagnosis.create!(question_number: 4, question_content: '学生時代の給食にはどんなメニューがあったか思い出すことが困難である', question_type: '左上')
+Diagnosis.create!(question_number: 5, question_content: '学生時代の友達とハマっていた遊び・事柄を思い出すことが難しい', question_type: '左上')
+Diagnosis.create!(question_number: 6, question_content: 'スケジューリングが苦手だ', question_type: '右上')
+Diagnosis.create!(question_number: 7, question_content: '将来像をイメージするのが苦手だ', question_type: '右上')
+Diagnosis.create!(question_number: 8, question_content: '創造力は無い方だと思う', question_type: '右上')
+Diagnosis.create!(question_number: 9, question_content: '物事をアレンジするのは不得意である', question_type: '右上')
+Diagnosis.create!(question_number: 10, question_content: '友達や同僚に本当のことを言えないことがある', question_type: '右上')
+Diagnosis.create!(question_number: 11, question_content: '会話の内容が思い出せないことがよくある', question_type: '左側')
+Diagnosis.create!(question_number: 12, question_content: '何回同じこと言わすの？と言われたことがある', question_type: '左側')
+Diagnosis.create!(question_number: 13, question_content: '校歌のリズムを思い出すのに時間がかかる', question_type: '左側')
+Diagnosis.create!(question_number: 14, question_content: '擬音語を使うことが多い', question_type: '左側')
+Diagnosis.create!(question_number: 15, question_content: 'どちらかというと新曲を覚えるのは苦手である', question_type: '左側')
+Diagnosis.create!(question_number: 16, question_content: '学校のチャイムがエレキギターだったら？など想像する事が苦手だ', question_type: '右側')
+Diagnosis.create!(question_number: 17, question_content: '音でびっくりする事が多い', question_type: '右側')
+Diagnosis.create!(question_number: 18, question_content: '即興で替え歌を作るのは難しい', question_type: '右側')
+Diagnosis.create!(question_number: 19, question_content: '言葉の裏を読み取るのが難しい', question_type: '右側')
+Diagnosis.create!(question_number: 20, question_content: '自分のテーマソングを作るとなったら、どんな感じかなかなか思い浮かばない', question_type: '右側')
+Diagnosis.create!(question_number: 21, question_content: '何度も同じ言葉を繰り返して言ってしまう傾向がある', question_type: '左下')
+Diagnosis.create!(question_number: 22, question_content: '心の中で独り言をよく言っている', question_type: '左下')
+Diagnosis.create!(question_number: 23, question_content: '自分との対話（内省）が苦手である', question_type: '左下')
+Diagnosis.create!(question_number: 24, question_content: '同じ失敗をよくすることがある', question_type: '左下')
+Diagnosis.create!(question_number: 25, question_content: '前回の失敗から学んで次に生かすことが苦手である', question_type: '左下')
+Diagnosis.create!(question_number: 26, question_content: 'どちらかというとゆっくり話すタイプである', question_type: '右下')
+Diagnosis.create!(question_number: 27, question_content: '臭いに鈍感な面がある', question_type: '右下')
+Diagnosis.create!(question_number: 28, question_content: '自分の思った通りに身体が動かない時がある', question_type: '右下')
+Diagnosis.create!(question_number: 29, question_content: '痛みに鈍感である', question_type: '右下')
+Diagnosis.create!(question_number: 30, question_content: '段差につまずくことがよくある', question_type: '右下')
+Diagnosis.create!(question_number: 31, question_content: '気配りが苦手である', question_type: '輻輳開散')
+Diagnosis.create!(question_number: 32, question_content: '集中力がなかなか持続しない', question_type: '輻輳開散')
+Diagnosis.create!(question_number: 33, question_content: '自分では忍耐力が無いほうだと思う', question_type: '輻輳開散')
+Diagnosis.create!(question_number: 34, question_content: '１日の中でスマホやPCを見ている時間が結構ある', question_type: '輻輳開散')
+Diagnosis.create!(question_number: 35, question_content: 'YouTubeやドラマなど動画コンテンツをよく見る方だ', question_type: '輻輳開散')
+
+
+# DiagnosisResultテーブル
+DiagnosisResult.create!(result_text: "左上左上左上", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/1/hidariue.jpg"), result_type: "左上")
+DiagnosisResult.create!(result_text: "右上右上右上", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/4/migiue.jpg"), result_type: "右上")
+DiagnosisResult.create!(result_text: "左側左側左側", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/5/hidarigawa.jpg"), result_type: "左側")
+DiagnosisResult.create!(result_text: "右側右側右側", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/6/migigawa.jpg"), result_type: "右側")
+DiagnosisResult.create!(result_text: "左下左下左下", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/7/hidarishita.jpg"), result_type: "左下")
+DiagnosisResult.create!(result_text: "右下右下右下", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/8/migishita.jpg"), result_type: "右下")
+DiagnosisResult.create!(result_text: "輻輳開散輻輳開散輻輳開散", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/9/fukusoukaisan.jpg"), result_type: "輻輳開散")
