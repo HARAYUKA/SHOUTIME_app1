@@ -1,0 +1,41 @@
+<div class="container">
+  <div id="wrapper">
+    <div class="question">
+      <h1 class="title">「眼トレ・メントレ・脳トレ」かんたん診断</h1>
+      <% @diagnoses.each do |diagnosis| %>
+        <ul class="questions">
+          <li class="textBox">
+            <span class="text">Q<%= diagnosis.question_number %>.<%= diagnosis.question_content %></span>
+            <div class="answer">
+              <%= form_with(local: true) do |f| %>
+                <%= f.radio_button :question, :yes, class: "#{diagnosis.question_type}" %>
+                <%= f.label :question, "YES" %>
+                <%= f.radio_button :question, :no %>
+                <%= f.label :question, "NO" %>
+              <% end %>
+            </div>    
+          </li>
+        </ul>
+      <% end %>
+      <button>診断する</button>
+    </div>
+    <% @diagnosis_results.each do |result| %>
+      <div class="result <%= result.result_type %>（結果）">
+        <div class="Result_recommend">あなたもしかしたら、こんな目かも</div>
+        <div class="Result_menu">
+          <div class="Result_menu_text"><%= result_status(result) %></div>
+        </div>
+        <p>そんなあなたにおススメのトレーニングはこちら！</p>
+        <div class="image">
+          <td><%= image_tag(result.result_picture.url, width: "500px") if result.result_picture? %>
+        </div>
+        <p><%= result.result_text %></p>
+        <div class="btn">
+          <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら", "#", class: "btn btn-info" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<script src="index.js"></script>

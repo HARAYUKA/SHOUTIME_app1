@@ -24,4 +24,20 @@ ActiveRecord::Schema.define(version: 2021_03_31_140354) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "diagnoses", force: :cascade do |t|
+    t.integer "question_number"
+    t.string "question_content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "question_type"
+  end
+
+  create_table "diagnosis_results", force: :cascade do |t|
+    t.string "result_text"
+    t.string "result_picture"
+    t.string "result_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
 end
