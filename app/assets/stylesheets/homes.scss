@@ -1,3 +1,65 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.home {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.home-title h1{
+  font-size: 70px;
+}
+
+.home-text {
+  display: inline-block;
+  font-size: 20px;
+  white-space: normal;
+  .eye {
+    background-color: rgb(237, 255, 71);
+    border-radius: 50%;
+    width: 400px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+  }
+  .mental {
+    background-color: rgb(57, 77, 255);
+    border-radius: 50%;
+    width: 400px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+  }
+  .brain {
+    background-color: rgb(255, 61, 61);
+    border-radius: 50%;
+    width: 400px;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+  }
+}
+
+
+.home-btn {
+  width: 400px;
+  height: 250px;
+  line-height: 250px;
+  background-color: rgb(19, 194, 19);
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  word-break: normal;
+  .home-btn-link {
+    text-decoration: none;
+    color: #ffffff ;
+    width: 280px;
+    
+  }
+}
