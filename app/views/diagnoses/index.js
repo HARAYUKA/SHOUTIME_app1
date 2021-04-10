@@ -5,9 +5,9 @@ $(function(){
   $("button").on("click", function(){
     //一度結果を非表示にする
     $(".result").hide();
-    //問題数を取得
-    var qNum = $("ul li").length;
-    if( $("ul li input:checked").length < qNum ){
+    //問題数を取得(layouts/_header.html.erbのul liも含まれる)
+    var qNum = $("li").length - 2; //「-2」は_header.html.erbのul liの数
+    if( $("li input:checked").length < qNum ){
       //全てチェックしていなかったらアラートを出す
       alert("未回答の質問があります");
     } 
@@ -17,8 +17,8 @@ $(function(){
             typeBNum = $(".右上:checked").length,
             typeCNum = $(".左側:checked").length,
             typeDNum = $(".右側:checked").length,
-            typeENum = $(".左下:checked").length;
-            typeFNum = $(".右下:checked").length;
+            typeENum = $(".左下:checked").length,
+            typeFNum = $(".右下:checked").length,
             typeGNum = $(".輻輳開散:checked").length;
         if( typeANum >= typeBNum && typeANum >= typeCNum && typeANum >= typeDNum && typeANum >= typeENum && typeANum >= typeFNum && typeANum >= typeGNum) {
             $(".左上（結果）").fadeIn();
