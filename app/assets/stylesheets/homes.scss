@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-$color_list: #92ff9b, #41b841, #00c241, #1addace8, #2bc3ffd0, #82a9fc, #3c59ff;
+$color_list: #00c210a9, #10c500c9, #00c0709f, #00c0da91, #00a2e2c0, #6c7bff, #2c4cff;
 
 .home {
 	-webkit-font-smoothing: antialiased;
@@ -13,7 +13,6 @@ $color_list: #92ff9b, #41b841, #00c241, #1addace8, #2bc3ffd0, #82a9fc, #3c59ff;
 }
 
 .section {
-	min-height: 500px;
 	margin: 0;
 	padding: 0 1.5em;
 	box-sizing: border-box;
@@ -27,6 +26,7 @@ $color_list: #92ff9b, #41b841, #00c241, #1addace8, #2bc3ffd0, #82a9fc, #3c59ff;
 		padding: 3em;
 	}
   h1, h2 {
+    font-family: 'Arial Black',sans-serif;
     color: #fff;
     font-size: 3em;
     margin: 0;
@@ -34,7 +34,7 @@ $color_list: #92ff9b, #41b841, #00c241, #1addace8, #2bc3ffd0, #82a9fc, #3c59ff;
     line-height: 1.1em;
     
     & + p {
-      color: #fff;
+      color: rgb(255, 255, 255);
       margin-top: 0.7em;
     }
     
@@ -89,7 +89,7 @@ $color_list: #92ff9b, #41b841, #00c241, #1addace8, #2bc3ffd0, #82a9fc, #3c59ff;
 }
 
 .button:hover {
-  background-color: #2EE59D;
+  background-color: #30e29bda;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
   transform: translateY(-7px);

@@ -35,6 +35,20 @@
   @extend .alert-danger;
 }
 
+/* header */
+
+.navbar-brand {
+  float: left;
+  margin-right: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7em;
+  color: #fff;
+  letter-spacing: -1px;
+  padding-top: 1px;
+  font-weight: bold;
+}
+
+
  /* debug */
 
 .debug_dump {
