@@ -1,29 +1,36 @@
 <%= render 'layouts/flash_messages' %>
 
-
 <div class="home">
-  <div class="home-title">
+  <div class="section">
     <h1>菊池式<br>眼トレ・メントレ・脳トレ</h1>
   </div>
-  <div class="home-text">
-    <h2 class="eye">
-      【眼トレ】
-      脳と直結している『視覚』のトレーニング
-      視野拡大と反応速度が向上
-      フィジカルに加え『視覚力』を鍛えることで、今まで以上のパフォーマンスを実現
-    </h2>
-    <h2 class="mental">
-      【メントレ】
-      強靭な精神力は、求める現実を引き寄せる
-      思考を現実化させるアスリート専用メンタルトレーニング
-    </h2>
-    <h2 class="brain">
-      【脳トレ】
-      脳を鍛えることで脳内の伝達経路が増幅
-      多岐に渡る思考回路を手に入れることで高度な戦略を実現
-    </h2>
+  <div class="section">
+    <div class="section__content">
+      <h2>【眼トレ】</h2>
+      <p>脳と直結している『視覚』のトレーニング<br>
+        視野拡大と反応速度が向上<br>
+        フィジカルに加え『視覚力』を鍛えることで、<br>
+        今まで以上のパフォーマンスを実現
+      </p>
+    </div>
   </div>
-  <div class="home-btn">
-    <%= link_to "かんたん診断で体験してみよう", diagnoses_index_path, class: "home-btn-link" %>
+  <div class="section">
+    <div class="section__content">
+      <h2>【メントレ】</h2>
+      <p>強靭な精神力は、求める現実を引き寄せる<br>
+        思考を現実化させるアスリート専用メンタルトレーニング
+      </p>
+    </div>
   </div>
+  <div class="section">
+    <div class="section__content">
+      <h2>【脳トレ】</h2>
+      <p>脳を鍛えることで脳内の伝達経路が増幅<br>
+        多岐に渡る思考回路を手に入れることで高度な戦略を実現
+      </p>
+    </div>
+  </div>
+</div>
+<div class="home-btn">
+  <a href="/diagnoses/index"><button class="button">かんたん診断で体験してみよう</button>
 </div>

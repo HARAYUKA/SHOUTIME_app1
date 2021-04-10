@@ -2,64 +2,95 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+$color_list: #92ff9b, #41b841, #00c241, #1addace8, #2bc3ffd0, #82a9fc, #3c59ff;
+
 .home {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+	background-image: linear-gradient(180deg, $color_list);
 }
 
-.home-title h1{
-  font-size: 70px;
-}
-
-.home-text {
-  display: inline-block;
-  font-size: 20px;
-  white-space: normal;
-  .eye {
-    background-color: rgb(237, 255, 71);
-    border-radius: 50%;
-    width: 400px;
-    height: 300px;
-    line-height: 300px;
-    text-align: center;
-  }
-  .mental {
-    background-color: rgb(57, 77, 255);
-    border-radius: 50%;
-    width: 400px;
-    height: 300px;
-    line-height: 300px;
-    text-align: center;
-  }
-  .brain {
-    background-color: rgb(255, 61, 61);
-    border-radius: 50%;
-    width: 400px;
-    height: 300px;
-    line-height: 300px;
-    text-align: center;
-  }
-}
-
-
-.home-btn {
-  width: 400px;
-  height: 250px;
-  line-height: 250px;
-  background-color: rgb(19, 194, 19);
-  border-radius: 50%;
-  text-align: center;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 30px;
-  word-break: normal;
-  .home-btn-link {
-    text-decoration: none;
-    color: #ffffff ;
-    width: 280px;
+.section {
+	min-height: 500px;
+	margin: 0;
+	padding: 0 1.5em;
+	box-sizing: border-box;
+	overflow: auto;
+	display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+	
+	@media screen and (min-width: 600px) {
+		padding: 3em;
+	}
+  h1, h2 {
+    color: #fff;
+    font-size: 3em;
+    margin: 0;
+    letter-spacing: -0.03em;
+    line-height: 1.1em;
     
+    & + p {
+      color: #fff;
+      margin-top: 0.7em;
+    }
+    
+    @media screen and (min-width: 500px) {
+      font-size: 4em;
+    }
   }
+  
+  p {
+    font-size: 1.25em;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.23em;
+    opacity: 0.8;
+    
+    @media screen and (min-width: 500px) {
+      font-size: 1.7em;
+    }
+  }
+}
+
+.section__content {
+	max-width: 700px;
+}
+
+
+//かんたん診断画面リンクボタン
+.home-btn {
+  margin-top: 1.5em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  width: 250px;
+  height: 145px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: rgb(240, 238, 238);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
