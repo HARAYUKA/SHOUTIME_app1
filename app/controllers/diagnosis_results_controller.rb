@@ -1,4 +1,6 @@
 class DiagnosisResultsController < ApplicationController
+  before_action :authenticate_user!
+  before_action :admin_user
   before_action :set_diagnosis_result, only: [:edit, :update, :destroy]
 
   def index

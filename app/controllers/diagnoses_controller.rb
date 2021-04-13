@@ -1,5 +1,7 @@
 class DiagnosesController < ApplicationController
   protect_from_forgery except: :index
+  before_action :authenticate_user!, except: :index
+  before_action :admin_user, except: :index
   before_action :set_diagnosis, only: [:edit, :update, :destroy]
   
   def index
