@@ -1,3 +1,8 @@
+# 管理者ユーザー
+User.create!(email: "admin@email.com",
+             password:  "adminuser",
+             admin: true)
+
 # Diagnosisテーブル
 Diagnosis.create!(question_number: 1, question_content: '暗記科目が苦手だ', question_type: '左上')
 Diagnosis.create!(question_number: 2, question_content: '昨日の晩御飯が思い出せないことがある', question_type: '左上')
