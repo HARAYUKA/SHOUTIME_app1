@@ -3,7 +3,7 @@
   <p><%= @user.email %></p>
   <%= link_to "かんたん診断質問の編集", diagnosis_path(id:1), class: "btn btn-info" %>
   <%= link_to "かんたん診断結果の編集", diagnosis_results_path, class: "btn btn-warning" %>
-<% end %>
-
-<h1>マイページ</h1>
-<p><%= @user.email %></p>
+<% else %>
+  <h1>マイページ</h1>
+  <p><%= @user.email %></p>
+<% end %>  
