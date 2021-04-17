@@ -1,0 +1,96 @@
+// // Place all the styles related to the homes controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// $color_list: #00c210a9, #10c500c9, #00c0709f, #00c0da91, #00a2e2c0, #6c7bff, #2c4cff;
+
+// .home {
+// 	-webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   text-rendering: optimizeLegibility;
+// 	background-image: linear-gradient(180deg, $color_list);
+// }
+
+// .section {
+// 	margin: 0;
+// 	padding: 0 1.5em;
+// 	box-sizing: border-box;
+// 	overflow: auto;
+// 	display: flex;
+//   justify-content: flex-start;
+//   align-content: center;
+//   align-items: center;
+	
+// 	@media screen and (min-width: 600px) {
+// 		padding: 3em;
+// 	}
+//   h1, h2 {
+//     font-family: 'Arial Black',sans-serif;
+//     color: #fff;
+//     font-size: 3em;
+//     margin: 0;
+//     letter-spacing: -0.03em;
+//     line-height: 1.1em;
+    
+//     & + p {
+//       color: rgb(255, 255, 255);
+//       margin-top: 0.7em;
+//     }
+    
+//     @media screen and (min-width: 500px) {
+//       font-size: 4em;
+//     }
+//   }
+  
+//   p {
+//     font-size: 1.25em;
+//     margin: 0;
+//     letter-spacing: -0.02em;
+//     line-height: 1.23em;
+//     opacity: 0.8;
+    
+//     @media screen and (min-width: 500px) {
+//       font-size: 1.7em;
+//     }
+//   }
+// }
+
+// .section__content {
+// 	max-width: 700px;
+// }
+
+
+// //かんたん診断画面リンクボタン
+// .home-btn {
+//   margin-top: 1.5em;
+//   height: 100%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .button {
+//   width: 250px;
+//   height: 145px;
+//   font-family: 'Roboto', sans-serif;
+//   font-size: 30px;
+//   text-transform: uppercase;
+//   letter-spacing: 2.5px;
+//   font-weight: 500;
+//   color: #000;
+//   background-color: rgb(240, 238, 238);
+//   border: none;
+//   border-radius: 45px;
+//   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+//   transition: all 0.3s ease 0s;
+//   cursor: pointer;
+//   outline: none;
+// }
+
+// .button:hover {
+//   background-color: #30e29bda;
+//   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+//   color: #fff;
+//   transform: translateY(-7px);
+// }
