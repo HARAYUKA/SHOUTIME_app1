@@ -23,15 +23,22 @@
       <div class="result <%= result.result_type %>（結果）">
         <div class="Result_recommend">あなたもしかしたら、こんな目かも</div>
         <div class="Result_menu">
-          <div class="Result_menu_text"><%= result_status(result) %></div>
+          <div class="Result_menu_text">【<%= result_status(result) %>】</div>
         </div>
-        <p>そんなあなたにおススメのトレーニングはこちら！</p>
+        <div class="Result_recommend">
+          <p><%= result_status(result) %>な方は・・・</p>
+        </div>  
+        <div class="result-text">
+          <p><%= result.result_text %></p>
+        </div>
         <div class="image">
-          <td><%= image_tag(result.result_picture.url, width: "500px") if result.result_picture? %>
+          <td><%= image_tag(result.result_picture.url, width: "300px") if result.result_picture? %>
         </div>
-        <p><%= result.result_text %></p>
-        <div class="btn">
-          <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら", "#", class: "btn btn-info" %>
+        <div class="result-text2">
+          <p>目は脳の一部であり、感覚神経や運動神経とつながっています。「眼トレ・メントレ・脳トレ」を行う事で、今まで抱えていた悩みを解決できるかもしれません！</p>
+        </div>
+        <div class="result-btn">
+          <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら！", "https://athlete-produce.com/?p=570", class: "btn" %>
         </div>
       </div>
     <% end %>
