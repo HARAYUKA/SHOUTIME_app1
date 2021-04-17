@@ -5,10 +5,9 @@ $(function(){
   $("button").on("click", function(){
     //一度結果を非表示にする
     $(".result").hide();
-    //問題数を取得(layouts/_header.html.erbのul liも含まれる)
-    var qNum = $("li").length - 2; //「-2」は_header.html.erbのul liの数
-
-    if( $("li input:checked").length < qNum ){
+    //問題数を取得
+    var qNum = $("ul.questions li").length;
+    if( $("ul.questions li input:checked").length < qNum ){
       //全てチェックしていなかったらアラートを出す
       alert("未回答の質問があります");
     } 

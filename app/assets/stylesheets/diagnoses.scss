@@ -5,7 +5,7 @@
 
 
 #wrapper {
-  max-width: 900px;
+  max-width: 890px;
   margin: 0 auto;
   padding: 30px 20px;
   box-sizing: border-box;
@@ -31,14 +31,15 @@
 }
 
 .text {
-  padding-left: 45px;
+  // padding-left: 45px;
   width: 650px;
+  font-weight: 600;
 }
 
-.answer {
-  padding-left: 15px;
-  word-spacing: 5px
-}
+// .answer {
+//   padding-left: 15px;
+//   word-spacing: 10px
+// }
 
 .question button {
   background: #5c90d2;
@@ -74,13 +75,11 @@
   color: rgb(255, 0, 0);
   font-size: 25px;
   margin : 0 auto;
-  width: 600px;
 }
 
 .result-text2 {
   font-size: 20px;
   margin : 0 auto;
-  width: 740px;
 }
 
 .image {
@@ -120,7 +119,7 @@
   justify-content: center;
 }
 
-#wrapper .btn {
+#wrapper .btn-result {
   width: 250px;
   // height: 100px;
   font-family: 'Roboto', sans-serif;
@@ -139,7 +138,7 @@
   outline: none;
 }
 
-#wrapper .btn:hover {
+#wrapper .btn-result:hover {
   background-color: #30e29bda;
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;

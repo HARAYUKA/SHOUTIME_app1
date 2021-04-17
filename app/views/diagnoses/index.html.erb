@@ -6,14 +6,16 @@
         <ul class="questions">
           <li class="textBox">
             <span class="text">Q<%= diagnosis.question_number %>.<%= diagnosis.question_content %></span>
-            <div class="answer">
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
               <%= form_with(local: true) do |f| %>
-                <%= f.radio_button :question, :yes, class: "#{diagnosis.question_type}" %>
-                <%= f.label :question, "YES" %>
-                <%= f.radio_button :question, :no %>
-                <%= f.label :question, "NO" %>
+                <label class="btn btn-secondary">
+                  <%= f.radio_button :question, :yes, class: "#{diagnosis.question_type}" %>YES
+                </label>
+                <label class="btn btn-secondary">
+                  <%= f.radio_button :question, :no %>NO
+                </label>
               <% end %>
-            </div>    
+            </div>
           </li>
         </ul>
       <% end %>
@@ -38,7 +40,7 @@
           <p>目は脳の一部であり、感覚神経や運動神経とつながっています。「眼トレ・メントレ・脳トレ」を行う事で、今まで抱えていた悩みを解決できるかもしれません！</p>
         </div>
         <div class="result-btn">
-          <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら！", "https://athlete-produce.com/?p=570", class: "btn" %>
+          <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら！", "https://athlete-produce.com/?p=570", class: "btn btn-result" %>
         </div>
       </div>
     <% end %>
