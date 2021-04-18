@@ -36,14 +36,16 @@
         <div class="image">
           <td><%= image_tag(result.result_picture.url, width: "300px") if result.result_picture? %>
         </div>
-        <div class="result-text2">
-          <p>目は脳の一部であり、感覚神経や運動神経とつながっています。「眼トレ・メントレ・脳トレ」を行う事で、今まで抱えていた悩みを解決できるかもしれません！</p>
-        </div>
-        <div class="result-btn">
-          <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら！", "https://athlete-produce.com/?p=570", class: "btn btn-result" %>
-        </div>
       </div>
     <% end %>
+    <div class="results">
+      <div class="results-text">
+        <p>目は脳の一部であり、感覚神経や運動神経とつながっています。「眼トレ・メントレ・脳トレ」を行う事で、今まで抱えていた悩みを解決できるかもしれません！</p>
+      </div>
+      <div class="result-btn">
+        <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら！", "https://athlete-produce.com/?p=570", class: "btn btn-result" %>
+      </div>
+    </div>  
   </div>
 </div>
 
