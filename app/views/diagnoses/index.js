@@ -1,10 +1,10 @@
 $(function(){
   //一度結果を非表示にする
-  $(".result, .results").hide();
+  $(".Result_recommend,.result, .results").hide();
   //ボタンがクリックされた時
   $("button").on("click", function(){
     //一度結果を非表示にする
-    $(".result, .results").hide();
+    $(".Result_recommend,.result, .results").hide();
     //問題数を取得
     var qNum = $("ul.questions li").length;
     if( $("ul.questions li input:checked").length < qNum ){
@@ -40,7 +40,11 @@ $(function(){
         );
       
         let selector = filtered.map(eyes => eyes.result).join(',');
-        $(`${selector},.results`).fadeIn();
+        $(`.Result_recommend,${selector},.results`).fadeIn();
+        var i = $("button").index(this)
+        var p = $(".Result_recommend").eq(i).offset().top;
+        $('html,body').animate({ scrollTop: p },　900, 'swing');
+        return false;
     }
   });
 });
