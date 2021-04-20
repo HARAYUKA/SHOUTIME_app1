@@ -1,21 +1,19 @@
-<header>
-  <nav class="navbar navbar-expand navbar-dark bg-secondary">
-    <%= link_to image_tag("logo.png", class: 'navbar-brand'), root_path %>
-    <div id="Navber">
-      <ul class="navbar-nav">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to '管理者情報編集', edit_user_registration_path, class: 'nav-link' %>
-          </li>
-          <li class="nav-item active">
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-          </li>
-      <% else %>
-          <li class="nav-item active">
-            <%= link_to "管理者画面", new_user_session_path, class: 'nav-link' %>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-  </nav>
+<header class="navbar navbar-expand navbar-dark bg-secondary fixed-top">
+  <%= link_to image_tag("logo.png", class: 'navbar-brand'), root_path %>
+  <div id="Navber">
+    <ul class="navbar-nav">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to '管理者情報編集', edit_user_registration_path, class: 'nav-link' %>
+        </li>
+        <li class="nav-item active">
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+        </li>
+    <% else %>
+        <li class="nav-item active">
+          <%= link_to "管理者画面", new_user_session_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </header>
