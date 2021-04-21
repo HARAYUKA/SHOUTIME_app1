@@ -1,19 +1,23 @@
-<header class="navbar navbar-expand navbar-dark bg-secondary fixed-top">
-  <%= link_to image_tag("logo.png", class: 'navbar-brand'), root_path %>
-  <div id="Navber">
-    <ul class="navbar-nav">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to '管理者情報編集', edit_user_registration_path, class: 'nav-link' %>
-        </li>
-        <li class="nav-item active">
-          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-        </li>
-    <% else %>
-        <li class="nav-item active">
-          <%= link_to "管理者画面", new_user_session_path, class: 'nav-link' %>
-        </li>
-      <% end %>
-    </ul>
+<header class="navbar navbar-expand">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon collapse-close"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">    <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item active">
+            <%= link_to '管理者情報編集', edit_user_registration_path, class: 'nav-link text-dark' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
+          </li>
+        <% else %>
+          <li class="nav-item active">
+            <%= link_to "管理者画面", new_user_session_path, class: 'nav-link text-dark' %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </header>
