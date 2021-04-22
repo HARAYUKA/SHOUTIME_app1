@@ -1,20 +1,20 @@
-<header class="navbar navbar-expand">
+<header class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon collapse-close"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">    <ul class="navbar-nav">
+      <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to '管理者情報編集', edit_user_registration_path, class: 'nav-link text-dark' %>
+            <%= link_to '管理者情報編集', edit_user_registration_path, class: 'nav-link text-white' %>
           </li>
           <li class="nav-item active">
-            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link text-dark' %>
+            <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link text-white' %>
           </li>
         <% else %>
           <li class="nav-item active">
-            <%= link_to "管理者画面", new_user_session_path, class: 'nav-link text-dark' %>
+            <%= link_to "管理者画面", new_user_session_path, class: 'nav-link text-white' %>
           </li>
         <% end %>
       </ul>
