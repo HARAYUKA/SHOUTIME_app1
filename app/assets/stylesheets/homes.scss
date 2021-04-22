@@ -3,13 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-$color_list: #00c210a9, #10c500c9, #00c0709f, #00c0da91, #00a2e2c0, #6c7bff, #2c4cff;
-
-.home {
-	-webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-	background-image: linear-gradient(180deg, $color_list);
+body {
+  background-image: url('running.jpeg');
 }
 
 .section {

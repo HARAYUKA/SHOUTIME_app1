@@ -1,3 +1,36 @@
 // Place all the styles related to the DiagnosisResults controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//診断結果編集画面
+
+.diagnosis-results {
+  background: #f1f1f1;
+  border: 3px solid #a1a1a1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  width: 1200px;
+}
+
+.diagnosis-results-forms {
+  background: #f1f1f1;
+  border: 3px solid #a1a1a1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  width: 800px;
+}
+
+.diagnosis-results-form {
+  background: #f1f1f1;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  width: 800px;
+}

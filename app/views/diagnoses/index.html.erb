@@ -1,4 +1,7 @@
 <div class="container">
+  <div class="admin-btn">
+    <%= link_to "前の画面に戻る", root_path, class: "btn btn-dark" %>
+  </div>  
   <div id="wrapper">
     <div class="question">
       <h1 class="title">「眼トレ・メントレ・脳トレ」かんたん診断</h1>
@@ -27,7 +30,7 @@
         <div class="Result_menu">
           <div class="Result_menu_text">【<%= result_status(result) %>】</div>
         </div>
-        <div class="Result_recommend">
+        <div class="Result_text">
           <p><%= result_status(result) %>な方は・・・</p>
         </div>  
         <div class="result-text">

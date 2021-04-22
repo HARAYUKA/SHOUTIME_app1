@@ -1,17 +1,19 @@
-<div id="new-edit">
-  <%= form_with(model: @diagnosis, local: true) do |f| %>
-    <!--%= render 'shared/error_messages', object: @diagnosis %>-->
+<div class="diagnosis-form">
+  <div id="new-edit">
+    <%= form_with(model: @diagnosis, local: true) do |f| %>
+      <!--%= render 'shared/error_messages', object: @diagnosis %>-->
 
-    <%= f.label :question_number, class: "label-#{yield(:class_text)}" %>
-    <%= f.number_field :question_number, class: "form-control" %>
+      <%= f.label :question_number, class: "label-#{yield(:class_text)}" %>
+      <%= f.number_field :question_number, class: "form-control" %>
 
-    <%= f.label :question_content, class: "label-#{yield(:class_text)}" %>
-    <%= f.text_field :question_content, class: "form-control" %>
+      <%= f.label :question_content, class: "label-#{yield(:class_text)}" %>
+      <%= f.text_field :question_content, class: "form-control" %>
 
-    <%= f.label :question_type, class: "label-#{yield(:class_text)}" %>
-    <%= f.select :question_type, ['左上', '右上', '左側', '右側', '左下', '右下', '輻輳開散'], {include_blank: true }, { class: 'form-control' } %>
+      <%= f.label :question_type, class: "label-#{yield(:class_text)}" %>
+      <%= f.select :question_type, ['左上', '右上', '左側', '右側', '左下', '右下', '輻輳開散'], {include_blank: true }, { class: 'form-control' } %>
 
-    <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %>
-    <%= link_to "キャンセル", diagnosis_path(yield(:id)), class: "btn btn-dark" %>
-  <% end %>
+      <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %>
+      <%= link_to "キャンセル", diagnosis_path(yield(:id)), class: "btn btn-dark" %>
+    <% end %>
+  </div>
 </div>  

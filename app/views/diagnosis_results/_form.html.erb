@@ -1,17 +1,19 @@
-<div id="new-edit">
-  <%= form_with(model: @diagnosis_result, local: true) do |f| %>
-    <!--%= render 'shared/error_messages', object: @diagnosis %>-->
+<div class="diagnosis-results-form">
+  <div id="new-edit">
+    <%= form_with(model: @diagnosis_result, local: true) do |f| %>
+      <!--%= render 'shared/error_messages', object: @diagnosis %>-->
 
-    <%= f.label :result_type, class: "label-#{yield(:class_text)}" %>
-    <%= f.select :result_type, ['左上', '右上', '左側', '右側', '左下', '右下', '輻輳開散'], {include_blank: true }, { class: 'form-control' } %>
+      <%= f.label :result_type, class: "label-#{yield(:class_text)}" %>
+      <%= f.select :result_type, ['左上', '右上', '左側', '右側', '左下', '右下', '輻輳開散'], {include_blank: true }, { class: 'form-control' } %>
 
-    <%= f.label :result_text, class: "label-#{yield(:class_text)}" %>
-    <%= f.text_field :result_text, class: "form-control" %>
+      <%= f.label :result_text, class: "label-#{yield(:class_text)}" %>
+      <%= f.text_field :result_text, class: "form-control" %>
 
-    <%= f.label :result_picture, class: "label-#{yield(:class_text)}" %>
-    <%= f.file_field :result_picture, class: "form-control" %>
+      <%= f.label :result_picture, class: "label-#{yield(:class_text)}" %>
+      <%= f.file_field :result_picture, class: "form-control" %>
 
-    <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %>
-    <%= link_to "キャンセル", diagnosis_results_path, class: "btn btn-dark" %>
-  <% end %>
+      <%= f.submit yield(:button_text), class: "btn btn-primary btn-#{yield(:class_text)}" %>
+      <%= link_to "キャンセル", diagnosis_results_path, class: "btn btn-dark" %>
+    <% end %>
+  </div>
 </div>  

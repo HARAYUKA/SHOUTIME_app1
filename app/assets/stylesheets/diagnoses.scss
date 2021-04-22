@@ -12,6 +12,9 @@
 }
 
 .title {
+  background: #53b9f5;
+  border: 3px solid #0084ff;
+  border-radius: 8px;
   font-size: 36px;
   margin-bottom: 30px;
   font-weight: bold;
@@ -43,6 +46,7 @@
 
 .question button {
   background: #5c90d2;
+  border: 3px solid #686868;
   width: 250px;
   display: block;
   margin: 20px auto 30px;
@@ -52,16 +56,24 @@
   font-weight: bold;
   box-shadow: none;
   color: #fff;
-  border: none;
   box-sizing: border-box;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.Result_recommend {
-  text-align: center;
+.Result_text {
   font-size: 18px;
   margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.Result_recommend {
+  background: #f1f1f1;
+  border: 3px solid #a1a1a1;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 
@@ -78,8 +90,11 @@
 }
 
 .results-text {
+  border: 3px solid #a1a1a1;
+  border-radius: 8px;
+  background: #f1f1f1;
   font-size: 20px;
-  margin : 0 auto;
+  margin-top : 10px;
 }
 
 .image {
@@ -93,8 +108,10 @@
 }
 
 .result {
+  background: #f1f1f1;
 	padding: 20px;
-	border: 3px solid #f1f1f1;
+	border: 3px solid #a1a1a1;
+  border-radius: 8px;
 	box-sizing: border-box;
 	margin: 0 auto;
 	display: none;
@@ -153,4 +170,42 @@
 
 #new-edit .btn {
   margin-top: 10px;
+}
+
+//診断質問編集画面
+
+.diagnosis-question {
+  background: #f1f1f1;
+  border: 3px solid #a1a1a1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  width: 1150px;
+}
+
+.diagnosis-forms {
+  background: #f1f1f1;
+  border: 3px solid #a1a1a1;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  width: 800px;
+}
+
+.diagnosis-form {
+  background: #f1f1f1;
+  padding: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  text-align: center;
+  width: 800px;
+}
+
+.admin-btn {
+  padding-bottom: 20px;
+  text-align: right;
 }

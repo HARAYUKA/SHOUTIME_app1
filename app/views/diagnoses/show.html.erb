@@ -1,27 +1,32 @@
 <div class="container">
-  <div class="col-md-11 col-md-offset-1">
-    <h1>質問一覧</h1>
-    <table class="table table-condenced table-hover" id="table-diagnoses">
-      <thead>
-        <tr>
-          <th>質問番号</th>
-          <th>質問内容</th>
-          <th>質問の種類</th>
-          <th><%= link_to "新規作成", new_diagnosis_path, class: "btn btn-primary btn-block" %></th>
-        </tr>
-      </thead>
-      <% @diagnoses.each do |diagnosis| %>
-        <tr>
-          <td><%= diagnosis.question_number %></td>
-          <td><%= diagnosis.question_content %></td>
-          <td><%= diagnosis.question_type %></td>
-          <td>
-            <%= link_to "編集", edit_diagnosis_path(diagnosis), class: "btn btn-info" %>
-            <%= link_to "削除", diagnosis_path(diagnosis), method: :delete,
-                data: { confirm: "削除してよろしいですか？" },class: "btn btn-danger" %>
-          </td>
-        </tr>  
-      <% end %>
-    </table>
+  <div class="admin-btn">
+    <%= link_to "管理者画面へ戻る", user_path(current_user), class: "btn btn-dark" %>
+  </div>  
+  <div class="diagnosis-question">
+    <div class="col-md-12 col-md-offset-1">
+      <h1>質問一覧</h1>
+      <table class="table table-condenced table-hover" id="table-diagnoses">
+        <thead>
+          <tr>
+            <th>質問番号</th>
+            <th>質問内容</th>
+            <th>質問の種類</th>
+            <th><%= link_to "新規作成", new_diagnosis_path, class: "btn btn-primary btn-block" %></th>
+          </tr>
+        </thead>
+        <% @diagnoses.each do |diagnosis| %>
+          <tr>
+            <td><%= diagnosis.question_number %></td>
+            <td><%= diagnosis.question_content %></td>
+            <td><%= diagnosis.question_type %></td>
+            <td>
+              <%= link_to "編集", edit_diagnosis_path(diagnosis), class: "btn btn-info" %>
+              <%= link_to "削除", diagnosis_path(diagnosis), method: :delete,
+                  data: { confirm: "削除してよろしいですか？" },class: "btn btn-danger" %>
+            </td>
+          </tr>  
+        <% end %>
+      </table>
+    </div>
   </div>
 </div>
