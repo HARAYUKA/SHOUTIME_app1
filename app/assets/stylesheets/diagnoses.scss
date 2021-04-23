@@ -12,8 +12,7 @@
 }
 
 .title {
-  background: #53b9f5;
-  border: 3px solid #0084ff;
+  background: #68a3f0;
   border-radius: 8px;
   font-size: 36px;
   margin-bottom: 30px;
@@ -34,15 +33,9 @@
 }
 
 .text {
-  // padding-left: 45px;
   width: 650px;
   font-weight: 600;
 }
-
-// .answer {
-//   padding-left: 15px;
-//   word-spacing: 10px
-// }
 
 .question button {
   background: #5c90d2;
@@ -100,6 +93,7 @@
 .image {
   margin-top: 20px;
   text-align: center;
+  max-width:100%;
 }
 
 .Result_menu {
@@ -138,7 +132,6 @@
 
 #wrapper .btn-result {
   width: 250px;
-  // height: 100px;
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   text-transform: uppercase;
@@ -183,6 +176,7 @@
   box-sizing: border-box;
   text-align: center;
   width: 1150px;
+  max-width: 100%;
 }
 
 .diagnosis-forms {
@@ -194,6 +188,7 @@
   box-sizing: border-box;
   text-align: center;
   width: 800px;
+  max-width:100%;
 }
 
 .diagnosis-form {
