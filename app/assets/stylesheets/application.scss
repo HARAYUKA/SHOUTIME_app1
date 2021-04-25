@@ -21,6 +21,10 @@
 }
 
  // max-width
+ .mw-md {
+  max-width: 576px;
+}
+
 .mw-xl {
   max-width: 1200px;
 }
@@ -48,25 +52,9 @@
   font-weight: bold;
 }
 
-.devise-page {
-  background: #f1f1f1;
-  padding: 20px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  width: 600px;
-  border: 3px solid #a1a1a1;
-  border-radius: 8px;
-  max-width:100%;
-  h1 {
-    text-align: center;
-  }
-}
-
-
  /* debug */
 
 .debug_dump {
-  background: #f1f1f1;
   clear: both;
   float: left;
   width: 100%;
