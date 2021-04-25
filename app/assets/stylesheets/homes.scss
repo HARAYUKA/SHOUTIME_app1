@@ -3,55 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.section {
-	margin: 0;
-	padding: 0 1.5em;
-	box-sizing: border-box;
-	overflow: auto;
-	display: flex;
-  justify-content: flex-start;
-  align-content: center;
-  align-items: center;
-	
-	@media screen and (min-width: 600px) {
-		padding: 3em;
-	}
-  h1, h2 {
-    font-family: 'Arial Black',sans-serif;
-    color: #fff;
-    font-size: 3em;
-    margin: 0;
-    letter-spacing: -0.03em;
-    line-height: 1.1em;
-    
-    & + p {
-      color: rgb(255, 255, 255);
-      margin-top: 0.7em;
-    }
-    
-    @media screen and (min-width: 500px) {
-      font-size: 4em;
-    }
-  }
-  
-  p {
-    font-size: 1.25em;
-    margin: 0;
-    letter-spacing: -0.02em;
-    line-height: 1.23em;
-    opacity: 0.8;
-    
-    @media screen and (min-width: 500px) {
-      font-size: 1.7em;
-    }
-  }
-}
-
-.section__content {
-	max-width: 700px;
-}
-
-
 //かんたん診断画面リンクボタン
 .home-btn {
   margin-top: 1.5em;
