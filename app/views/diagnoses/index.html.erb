@@ -1,8 +1,8 @@
-<div class="admin-btn">
-  <%= link_to "前の画面に戻る", root_path, class: "btn btn-dark" %>
-</div>  
 <div id="wrapper">
   <div class="question">
+    <div class="admin-btn">
+      <%= link_to "前の画面に戻る", root_path, class: "btn btn-dark" %>
+    </div>  
     <h1 class="title">「眼トレ・メントレ・脳トレ」かんたん診断</h1>
     <% @diagnoses.each do |diagnosis| %>
       <ul class="questions">
@@ -23,7 +23,7 @@
     <% end %>
     <button>診断する</button>
   </div>
-  <div class="Result_recommend">あなたもしかしたら、こんな目かも？？</div>
+  <div class="Result_recommend">あなたはもしかしたら、こんな目かも？？</div>
   <% @diagnosis_results.each do |result| %>
     <div class="result <%= result.result_type %>（結果）">
       <div class="Result_menu">
