@@ -1,6 +1,6 @@
 # 管理者ユーザー
-User.create!(email: "admin@email.com",
-             password:  "adminuser",
+User.create!(email: ENV['EMAIL'],
+             password:  ENV['PASSWORD'],
              admin: true)
 
 # Diagnosisテーブル
