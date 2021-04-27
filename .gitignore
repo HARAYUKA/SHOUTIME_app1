@@ -34,3 +34,6 @@
 .DS_Store
 /vendor/bundle
 /.idea
+
+# 管理者アカウントを管理
+/.env
