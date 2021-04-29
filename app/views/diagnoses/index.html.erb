@@ -1,41 +1,54 @@
-<div class="container">
-  <div id="wrapper">
-    <div class="question">
-      <h1 class="title">「眼トレ・メントレ・脳トレ」かんたん診断</h1>
-      <% @diagnoses.each do |diagnosis| %>
-        <ul class="questions">
-          <li class="textBox">
-            <span class="text">Q<%= diagnosis.question_number %>.<%= diagnosis.question_content %></span>
-            <div class="answer">
-              <%= form_with(local: true) do |f| %>
-                <%= f.radio_button :question, :yes, class: "#{diagnosis.question_type}" %>
-                <%= f.label :question, "YES" %>
-                <%= f.radio_button :question, :no %>
-                <%= f.label :question, "NO" %>
-              <% end %>
-            </div>    
-          </li>
-        </ul>
-      <% end %>
-      <button>診断する</button>
-    </div>
-    <% @diagnosis_results.each do |result| %>
-      <div class="result <%= result.result_type %>（結果）">
-        <div class="Result_recommend">あなたもしかしたら、こんな目かも</div>
-        <div class="Result_menu">
-          <div class="Result_menu_text"><%= result_status(result) %></div>
-        </div>
-        <p>そんなあなたにおススメのトレーニングはこちら！</p>
-        <div class="image">
-          <td><%= image_tag(result.result_picture.url, width: "500px") if result.result_picture? %>
-        </div>
-        <p><%= result.result_text %></p>
-        <div class="btn">
-          <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら", "#", class: "btn btn-info" %>
-        </div>
-      </div>
+<div id="wrapper">
+  <div class="question">
+    <div class="admin-btn">
+      <%= link_to "前の画面に戻る", root_path, class: "btn btn-dark" %>
+    </div>  
+    <h1 class="title">「眼トレ・メントレ・脳トレ」かんたん診断</h1>
+    <% @diagnoses.each do |diagnosis| %>
+      <ul class="questions">
+        <li class="textBox">
+          <span class="text">Q<%= diagnosis.question_number %>.<%= diagnosis.question_content %></span>
+          <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <%= form_with(local: true) do |f| %>
+              <label class="btn btn-secondary">
+                <%= f.radio_button :question, :yes, class: "#{diagnosis.question_type}" %>YES
+              </label>
+              <label class="btn btn-secondary">
+                <%= f.radio_button :question, :no %>NO
+              </label>
+            <% end %>
+          </div>
+        </li>
+      </ul>
     <% end %>
+    <button>診断する</button>
   </div>
+  <div class="Result_recommend">あなたはもしかしたら、こんな目かも？？</div>
+  <% @diagnosis_results.each do |result| %>
+    <div class="result <%= result.result_type %>（結果）">
+      <div class="Result_menu">
+        <div class="Result_menu_text">【<%= result_status(result) %>】</div>
+      </div>
+      <div class="Result_text">
+        <p><%= result_status(result) %>な方は・・・</p>
+      </div>  
+      <div class="result-text">
+        <p><%= result.result_text %></p>
+      </div>
+      <div class="image">
+        <td><%= image_tag(result.result_picture.url, width: "300px") if result.result_picture? %>
+      </div>
+    </div>
+  <% end %>
+  <div class="results">
+    <div class="results-text">
+      <p>目は脳の一部であり、感覚神経や運動神経とつながっています。「眼トレ・メントレ・脳トレ」を行う事で、今まで抱えていた悩みを解決できるかもしれません！</p>
+    </div>
+    <div class="result-btn">
+      <%= link_to "「眼トレ・メントレ・脳トレ」に興味を持った方はこちら！", "https://athlete-produce.com/?p=570", class: "btn btn-result" %>
+    </div>
+  </div>  
 </div>
+
 
 <script src="index.js"></script>
