@@ -1,6 +1,6 @@
 # 管理者ユーザー
-User.create!(email: ENV['EMAIL'],
-             password:  ENV['PASSWORD'],
+User.create!(email: Rails.application.credentials.gmail[:address],
+             password:  Rails.application.credentials.gmail[:password],
              admin: true)
 
 # Diagnosisテーブル
