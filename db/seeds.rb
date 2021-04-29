@@ -1,6 +1,6 @@
 # 管理者ユーザー
-User.create!(email: "admin@email.com",
-             password:  "adminuser",
+User.create!(email: ENV['EMAIL'],
+             password:  ENV['PASSWORD'],
              admin: true)
 
 # Diagnosisテーブル
@@ -42,10 +42,10 @@ Diagnosis.create!(question_number: 35, question_content: 'YouTubeやドラマな
 
 
 # DiagnosisResultテーブル
-DiagnosisResult.create!(result_text: "左上左上左上", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/1/hidariue.jpg"), result_type: "左上")
-DiagnosisResult.create!(result_text: "右上右上右上", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/4/migiue.jpg"), result_type: "右上")
-DiagnosisResult.create!(result_text: "左側左側左側", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/5/hidarigawa.jpg"), result_type: "左側")
-DiagnosisResult.create!(result_text: "右側右側右側", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/6/migigawa.jpg"), result_type: "右側")
-DiagnosisResult.create!(result_text: "左下左下左下", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/7/hidarishita.jpg"), result_type: "左下")
-DiagnosisResult.create!(result_text: "右下右下右下", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/8/migishita.jpg"), result_type: "右下")
-DiagnosisResult.create!(result_text: "輻輳開散輻輳開散輻輳開散", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/9/fukusoukaisan.jpg"), result_type: "輻輳開散")
+DiagnosisResult.create!(result_text: "過去に見た光景や体験、映像を視覚的に思い出すことが苦手", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/1/hidariue.png"), result_type: "左上")
+DiagnosisResult.create!(result_text: "未来のことをイメージしたり、新しくイメージを作り出すことが苦手", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/2/migiue.png"), result_type: "右上")
+DiagnosisResult.create!(result_text: "過去に話した会話の内容や、聞いた声や音を思い出すことが苦手", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/3/hidarigawa.png"), result_type: "左側")
+DiagnosisResult.create!(result_text: "作曲や聴いたことがない音の想像など、音声情報を作り出すことが苦手", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/4/migigawa.png"), result_type: "右側")
+DiagnosisResult.create!(result_text: "心の中で言葉を使って何かを考えたりすることが苦手", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/5/hidarishita.png"), result_type: "左下")
+DiagnosisResult.create!(result_text: "感情や触覚や味覚、嗅覚などの身体の感覚を働かせたり、思い出すことが苦手", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/6/migishita.png"), result_type: "右下")
+DiagnosisResult.create!(result_text: "集中力が続かなかったり、立体感・遠近感・空間把握をすることが苦手", result_picture: open("#{Rails.root}/public/uploads/diagnosis_result/result_picture/7/fukusoukaisan.png"), result_type: "輻輳開散")

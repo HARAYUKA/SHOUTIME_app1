@@ -15,9 +15,13 @@
  */
  
  @import "bootstrap";
- // max-width
 
-.mw-md {
+ body {
+  background-image: url('running.jpeg');
+}
+
+ // max-width
+ .mw-md {
   max-width: 576px;
 }
 
@@ -47,7 +51,6 @@
 //   padding-top: 1px;
 //   font-weight: bold;
 // }
-
 
  /* debug */
 
